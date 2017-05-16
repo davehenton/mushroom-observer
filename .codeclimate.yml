@@ -52,7 +52,7 @@ engines:
     enabled: true
 
 # scss style checker
- scss-lint:
+  scss-lint:
     enabled: true
 
 #### exclude_paths ####
