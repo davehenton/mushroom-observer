@@ -52,7 +52,6 @@ engines:
     enabled: true
 
 # scss style checker
-engines:
  scss-lint:
     enabled: true
 
@@ -147,7 +146,7 @@ ratings:
 #  exclude_paths:
 #  - public/design_test/jquery-1.5.2.min.js
 #  - app/assets/javascripts/bootstrap.js"
-# 	"---
+#     "---
 # engines:
 #   brakeman:
 #     enabled: true
@@ -184,4 +183,3 @@ ratings:
 #  exclude_paths:
 #  - public/design_test/jquery-1.5.2.min.js
 #  - app/assets/javascripts/bootstrap.js"
-
