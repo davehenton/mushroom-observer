@@ -1,0 +1,89 @@
+# RuboCop ruby style guide configuration for Taikala projects (rubocop version 0.48)
+# 
+# https://github.com/bbatsov/ruby-style-guide
+# 
+# Installation:
+#   
+#   1. Copy this file to your local home directory
+#   2. gem install rubocop --version=0.48
+#   3. Install Atom package linter-rubocop
+#       (lints automatically when file is saved, or based on linter settings)
+#   4. Install Atom package rubocop-auto-correct
+#       (can be used to try to auto correct detected issues, ensure that code works after correct)
+#   5. Create .rubocop.yml in your project and add
+#        inherit_from:
+#          - https://taikala.bitbucket.io/rubocop.yml
+#   6. Add project specific rules / excptions if needed
+# GUIDELINES:
+#   
+#   1. Only apply style guide to new code or changes (no need to go through all existing code)
+#   2. If you think a rule should be disabled, discuss with colleagues and make change to this 
+#      snippet
+#   3. If you need to locally ignore a rule for a good reason you can use
+#      # rubocop:disable Some/Rule
+
+Metrics/LineLength:
+  Max: 100
+  
+Style/TrailingWhitespace:
+  Enabled: false
+  
+Style/TrailingBlankLines:
+  Enabled: false
+  
+Style/Documentation:
+  Enabled: false
+  
+Style/GuardClause:
+  Enabled: false  
+  
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+# Indent multiple line operations with 2 spaces
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+  
+Style/MultilineMethodCallIndentation:
+  Enabled: false
+  
+# Align paramters with fixed indentation
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+  
+# Allow 30 lines per method
+Metrics/MethodLength:
+  Max: 30
+
+# Allow 500 lines per class
+Metrics/ClassLength:
+  Max: 500
+
+# Allow 500 lines per module
+Metrics/ModuleLength:
+  Max: 500
+
+# Allow more complex methods
+Metrics/AbcSize:
+  Max: 100
+  
+# Gems can be in any order
+Bundler/OrderedGems:
+  Enabled: false
+  
+# don't require frozen string comment
+Style/FrozenStringLiteralComment:
+  Enabled: false
+  
+# don't care how comments are indented
+Style/CommentIndentation:
+  Enabled: false
+  
+AllCops:
+  Exclude:
+    - '**/*.html.erb'
+    - '**/schema.rb'
+ 
