@@ -2,4 +2,4 @@ engines:
   duplication:
     enabled: true
     exclude_paths:
-    -"**/javascripts/**"
+    - "**/javascripts/**"
